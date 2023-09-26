@@ -1,0 +1,31 @@
+footer{
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: 5rem 0;
+    background-color: #131E33;
+    color: #fff;
+
+    position:static; /*mantener el footer abajo*/
+    bottom: 0;
+}
+
+.marca{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.marca p {
+    padding: 0 1rem;
+}
+
+
+.links{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.links a{
+    padding: 0 5px;
+}
