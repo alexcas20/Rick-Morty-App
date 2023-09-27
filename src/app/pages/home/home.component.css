@@ -1,0 +1,116 @@
+
+
+
+.title hr{
+    border: 10px solid #08BC31;
+    border-radius: 5px;
+}
+
+
+.title h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    padding: 1rem 0;
+    letter-spacing: 15px;
+    text-shadow: 2px 15px 40px #000;
+}
+
+h5{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+
+.card{
+    color: #fff;
+    padding: 2rem;
+    margin: 2.5rem 1rem;
+    transition: all ease-in .5s;
+    cursor: pointer;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 2px 15px 30px #000;
+    height: 650px;
+}
+
+.card-image{
+    margin: 1.5rem 0;
+    width: 250px;
+    
+}
+
+
+
+.specie{
+width: 190px;
+background-color: #08BC31;
+text-align: center;
+letter-spacing: 2px;
+padding: .5rem;
+position: absolute;
+top: 0px;
+left: 0px;
+border-radius: 5px;
+
+
+}
+
+.status{
+    background-color: #08BC31;
+    position: absolute;
+    top: 280px;
+    right: 0;
+    width: 180px;
+    margin: 0 .5rem 0 0;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.card:hover {
+    
+    transform: scale(1.08);
+}
+
+
+
+
+
+.gender span{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    
+}
+
+.gender p {
+    position: absolute;
+    top: 420px;
+    right: 175px;
+}
+
+.location  {
+    padding: 1.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+
+.card-footer{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-footer button{
+    width: 100%;
+}
+
+
+

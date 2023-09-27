@@ -1,12 +1,12 @@
 footer{
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    margin: 5rem 0;
-    background-color: #131E33;
-    color: #fff;
 
-    position:static; /*mantener el footer abajo*/
+    font-size: 1.5rem;
+
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    height: 20%;
+    position:relative; /*mantener el footer abajo*/
     bottom: 0;
 }
 
