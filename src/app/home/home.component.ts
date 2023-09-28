@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private api: ApiServiceService) { }
+  constructor(private api: ApiServiceService,
+    private route: Router) { }
 
-  arrayCharactersNumber: number[] = [1,2,3,4,5,6];
+  arrayCharactersNumber: number[] = [1,2,3,4,5,6,7,8,9];
   arrayCharacters: any[] = [];
 
   ngOnInit(): void {
@@ -27,6 +29,13 @@ export class HomeComponent implements OnInit {
     console.log(this.arrayCharacters)
      
 
+  }
+
+  getInfoCharacter(id:number){
+    this.api.getCharacters(id)
+      .subscribe(resp => {
+        this.route.navigate(['/pages/character/'+id])
+      })
   }
 
 }

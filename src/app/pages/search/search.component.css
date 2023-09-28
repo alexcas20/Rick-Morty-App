@@ -1,0 +1,18 @@
+.input-group{
+    padding: 1.5rem;
+    margin: -1.5rem 0 4rem 0;
+}
+
+.input-group .form-control{
+    transition: all ease-in .3s;
+}
+
+.input-group .form-control:hover{
+
+    box-shadow: 2px 3px 25px  rgba(4, 235, 35, 0.63);
+}
+
+.input-group button:hover{
+
+    background-color: rgba(4, 235, 35, 0.63) ;
+}

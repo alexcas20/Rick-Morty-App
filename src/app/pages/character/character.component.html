@@ -1,0 +1,59 @@
+
+<div class="container">
+   
+    
+    <div class="row d-flex justify-content-center align-items-center">
+        <div
+          class="col-lg-4 col-md-6 col-sm-4 col-xs-5">
+          <div class="card card-first">
+            <img
+              [src]="character?.image"
+              [alt]="character?.image"
+              class="card-image img-fluid" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-4 col-xs-5">
+            <div class="buttons d-flex justify-content-end mb-5" routerLink="/home">
+                <button class="btn btn-success">
+                    Back to  <i class="fa-solid fa-home"></i>
+                </button>
+            </div>
+            <div class="card card-data">
+                <h5 class="card-title">{{ character?.name }}</h5>
+                <span class="specie">{{ character?.species }}</span>
+
+                <div class="card-body">
+                    <div class="status" *ngIf="character?.status === 'Alive' ; else statusN">
+                        <span>{{ character?.status }}</span>
+                      </div>
+            
+                      <!-- StatusN -->
+                      <ng-template #statusN>
+                        <div class="statusN">
+                          <span>{{ character?.status }}</span>
+                        </div>
+                      </ng-template>
+            
+                    
+            
+                      <div
+                        class="gender"
+                        *ngIf="character?.gender?.toLowerCase() === 'male'; else female"> 
+                         <p class="card-text">Gender: Male</p>
+                      </div>
+            
+                      <span class="location">Location: {{ character?.location?.name }}</span>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    
+      <ng-template #female>
+        <div class="gender">
+          <p>Female</p>
+        </div>
+      </ng-template>
+    </div>
+    
