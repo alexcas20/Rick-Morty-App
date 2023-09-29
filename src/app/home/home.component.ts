@@ -31,11 +31,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getInfoCharacter(id:number){
-    this.api.getCharacters(id)
-      .subscribe(resp => {
-        this.route.navigate(['/pages/character/'+id])
-      })
-  }
+ 
 
 }

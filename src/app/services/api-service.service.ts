@@ -11,6 +11,8 @@ export class ApiServiceService {
 
   private api = ' https://rickandmortyapi.com/api';
 
+  private readonly CHARACTER_PAGE = 'https://rickandmortyapi.com/api/character/?page='
+
   
   
 
@@ -22,9 +24,12 @@ export class ApiServiceService {
     return this.http.get<any>(dir);
   }
 
-  // getAllCharacters(page = 1, term = ""): Observable<any> {
-  //   return this.http.get<any>(`${this.api}/?page=${page}${(term === "") ? "" : "&name=" + term}`);
-  // }
+  getCharactersPage(page: string):Observable<any>{
+    const dir = this.CHARACTER_PAGE + page
+    console.log(dir)
+    console.log('Peticion pages')
+    return this.http.get<any>(dir);
+  }
 
  
 

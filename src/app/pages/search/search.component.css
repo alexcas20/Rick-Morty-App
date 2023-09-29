@@ -16,3 +16,45 @@
 
     background-color: rgba(4, 235, 35, 0.63) ;
 }
+
+
+
+
+/* Card */
+
+.card{
+    margin: 2rem 0;
+    color: #fff;
+    transition: all ease-in .5s;
+    cursor: pointer;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 2px 15px 30px #000;
+    transition: all ease-in-out .2s;
+    width: 320px;
+}
+
+.card-title{
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-body span{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 50%;
+    padding-top: 1rem;
+    letter-spacing: 3px;
+}

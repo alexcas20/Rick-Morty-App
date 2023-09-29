@@ -1,0 +1,11 @@
+<div class="pagination">
+
+    <span *ngIf="p !== 1"  class="pagination__btn" (click)="changePage(p - 1)">
+        <i class="fa-solid fa-chevron-left"></i>
+    </span>
+    <span class="pagination__page">{{p}}/42</span>
+    <span [ngClass]="checkTopPage(p)"  class="pagination__btn"
+    (click)="changePage(p + 1)">
+    <i class="fa-solid fa-chevron-right"></i>
+    </span>
+  </div>

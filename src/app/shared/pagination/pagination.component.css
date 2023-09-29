@@ -1,0 +1,40 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.pagination__page{
+    background-color:  rgb(24, 23, 23);
+    padding: .5rem .5rem 0 .5rem;
+    height: 60px;
+    border-radius: 5px;
+    margin: 0 .5rem 0 .5rem;
+}
+
+.pagination__page p{
+   
+    font-size: .5rem;
+}
+
+
+
+.pagination__btn{
+    font-size: 2.2rem;
+    margin: 0 0 2rem 0;
+    cursor: pointer;
+    background-color: rgb(24, 23, 23);
+    padding: .5rem 1rem 0 1rem;
+    border-radius: 5px;
+    transition: all ease-in .2s;
+}
+
+.pagination__btn:hover{
+    transform: scale(1.1);
+}
+
+.topBtnD{
+    display: none;
+}
+

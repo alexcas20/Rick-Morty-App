@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SearchComponent } from './search/search.component';
 import { BrandComponent } from './brand/brand.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { CharacterComponent } from './character/character.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { CharacterComponent } from './character/character.component';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    NgxPaginationModule
+    SharedModule
   ]
 })
 export class PagesModule { }
