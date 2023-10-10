@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   p:number = 1;
   id!: string;
   character!: string;
+  inputCh: string = '';
   busqueda = false;
   charactersSearch: any[] = [];
   pagesTotal: any;
@@ -32,29 +33,45 @@ export class SearchComponent implements OnInit {
   }
 
   searchCh(ch:string){
-    this.character = ch;
-    this.busqueda =true;
-    console.log(ch)
-    this.api.getCharacterName(ch,this.p)
-      .subscribe(resp => {
-        console.log(resp)
-      })
+      this.p = 1;
+      this.character = ch;
+      console.log(ch)
+      this.busqueda = true
+      this.api.getCharacterName(ch,1)
+        .subscribe(resp => {
+          this.busqueda = true
+          this.pagesTotal = resp.info.pages;
+          this.charactersSearch = resp.results;
+          console.log(resp)
+          
+         
+        })
+
+        this.inputCh = '';
+    
+
+   
+   
   }
 
 
   pageChanged(event: any): void{
   if(this.busqueda){
-    
+  
+    console.log(this.busqueda)
     this.api.getCharacterName(this.character,event)
       .subscribe(resp => {
         console.log(resp);
-        this.charactersSearch = resp.results;
+        [...this.charactersSearch] = resp.results;
       })
       this.p = event;
   } 
   else {
+    
+    console.log(this.busqueda)
     this.api.getCharactersPage(event).subscribe(resp => {
-      console.log(resp)
+      console.log(resp);
+      this.pagesTotal = resp.info.pages;
       this.arrayCharacters = resp.results;
     })
 

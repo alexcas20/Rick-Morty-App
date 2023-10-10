@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { BrandComponent } from './brand/brand.component';
 import { CharacterComponent } from './character/character.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

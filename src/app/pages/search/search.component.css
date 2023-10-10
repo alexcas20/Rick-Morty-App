@@ -30,7 +30,7 @@
     background-color: rgb(39, 39, 39);
     box-shadow: 2px 15px 30px #000;
     transition: all ease-in-out .2s;
-    width: 320px;
+    width: 100%;
 }
 
 .card-title{

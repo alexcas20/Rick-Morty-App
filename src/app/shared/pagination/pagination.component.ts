@@ -9,6 +9,7 @@ export class PaginationComponent implements OnInit {
 
  
   @Input() p: any;
+  @Input() pagesT: any;
   @Output() actualPageEmitter = new EventEmitter();
 
   constructor() { }
@@ -17,7 +18,7 @@ export class PaginationComponent implements OnInit {
   }
 
   changePage(newPage: any){
-    if(newPage < 1 || newPage > 42){
+    if(newPage < 1 || newPage > this.pagesT){
       return
     }
     this.p = newPage;
@@ -26,7 +27,7 @@ export class PaginationComponent implements OnInit {
 
   checkTopPage(p:any){
     
-    if(p >= 42){
+    if(p >= this.pagesT){
       return 'topBtnD'
     } return
   }

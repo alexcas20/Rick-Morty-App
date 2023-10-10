@@ -3,18 +3,17 @@
         <div class="col-lg-6 col-md-6 col-sm-8">
             <div class="input-group">
                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                name="character"
-                #character 
+                [(ngModel)]="inputCh"
                 aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-success" (click)="searchCh(character.value)">search</button>
+                <button type="button" class="btn btn-outline-success" (click)="searchCh(inputCh)">search</button>
               </div>
         </div>
     </div>
 </div>
 
-<div class="container ">
+<div class="container" *ngIf="!busqueda;else filterCh">
     <div class="row d-flex justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-8" *ngFor="let item of arrayCharacters">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of arrayCharacters">
             <div class="card" routerLink="/pages/character/{{item.id}}">
                 <img class="img-fluid" [src]="item.image" alt="">
                 <div class="card-title">{{item.name}}</div>
@@ -28,6 +27,24 @@
 <br>
 <br>
 
+<ng-template #filterCh >
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-4 col-md-6 col-sm-8" *ngFor="let item of charactersSearch">
+                <div class="card" routerLink="/pages/character/{{item.id}}">
+                    <img class="img-fluid" [src]="item.image" alt="">
+                    <div class="card-title">{{item.name}}</div>
+                    <div class="card-body">
+                        <span [ngClass]="fnStatus(item.status)"> <p>{{item.status}}</p></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</ng-template>
 
-<app-pagination [p]="p" (actualPageEmitter)="pageChanged($event)"></app-pagination>
+
+<app-pagination [p]="p" [pagesT]="pagesTotal" (actualPageEmitter)="pageChanged($event)"></app-pagination>
 
