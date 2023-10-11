@@ -4,6 +4,11 @@
 .btn{
    margin: 0 .3rem;
     transition: all .3s ease-in;
+   
+}
+
+.btn-search{
+    background-color: #62c511cc;
 }
 
 .btn:hover{
@@ -32,6 +37,7 @@
 
 
 .card-data{
+    
    
 
     text-align: center;

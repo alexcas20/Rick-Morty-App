@@ -1,20 +1,30 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 marca">
-        <p>2023</p>
-        <p>Developed By Jacs</p>
-      </div>
-      <div class="col-6">
-        <div class="links">
-          <a href="#">
-            <i class="fa-solid fa-house"></i>
-          </a>
-          <a href="#">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer class="navbar navbar-fixed-bottom">
+ <div class="links">
+  
+      <a href="">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    
+    
+      <a href="">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+  
+ 
+ </div>
+ <div class="menu">
+  <a [routerLink]="['/home']">
+    <i class="fa-solid fa-house"> Home</i>
+  </a>
+  <a [routerLink]="['/pages/search']">
+    <i class="fa-solid fa-search"> Search</i>
+  </a>
+  <a >
+    <i class="fa-solid fa-filter"> Filter</i>
+  </a>
+ </div>
+ <div class="text">
+  <p>&copy;2023 Made by Jacs | </p>
+ </div>
+ 
 </footer>
