@@ -1,5 +1,11 @@
 
 <div class="container">
+
+    <div class="buttons d-flex justify-content-center mb-5" routerLink="/home">
+        <button class="btn btn-success">
+            Back to  <i class="fa-solid fa-home"></i>
+        </button>
+    </div>
    
     
     <div class="row d-flex justify-content-center align-items-center">
@@ -14,11 +20,7 @@
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-4 col-xs-5">
-            <div class="buttons d-flex justify-content-end mb-5" routerLink="/home">
-                <button class="btn btn-success">
-                    Back to  <i class="fa-solid fa-home"></i>
-                </button>
-            </div>
+           
             <div class="card card-data">
                 <h5 class="card-title">{{ character?.name }}</h5>
                 <span class="specie">{{ character?.species }}</span>

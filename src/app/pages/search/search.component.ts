@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SpinnerService } from 'src/app/shared/spinner/spinner.service';
 import { ApiServiceService } from '../../services/api-service.service';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -18,7 +20,10 @@ export class SearchComponent implements OnInit {
   charactersSearch: any[] = [];
   pagesTotal: any;
 
+ 
+
   constructor(private api: ApiServiceService,
+ 
     ) { }
 
   ngOnInit(): void {
@@ -33,12 +38,15 @@ export class SearchComponent implements OnInit {
   }
 
   searchCh(ch:string){
+      const tipadoCh = ch.toLocaleLowerCase();
       this.p = 1;
-      this.character = ch;
-      console.log(ch)
-      this.busqueda = true
-      this.api.getCharacterName(ch,1)
+      this.character = tipadoCh;
+      console.log(tipadoCh)
+      this.busqueda = true;
+     
+        this.api.getCharacterName(tipadoCh,1)
         .subscribe(resp => {
+         
           this.busqueda = true
           this.pagesTotal = resp.info.pages;
           this.charactersSearch = resp.results;
@@ -50,6 +58,8 @@ export class SearchComponent implements OnInit {
         this.inputCh = '';
     
 
+     
+      
    
    
   }
@@ -83,6 +93,12 @@ export class SearchComponent implements OnInit {
 
 
   }
+
+  // enterSearch(event:any){
+  //   if(event.keyCode == 13){
+  //     this.searchCh()
+  //   }
+  // }
 
   fnStatus(status:any){
     if(status === 'Alive'){

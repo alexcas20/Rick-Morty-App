@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RouterModule } from '@angular/router';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
   FooterComponent,
   NavbarComponent,
-  PaginationComponent],
+  PaginationComponent,
+  SpinnerComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     FooterComponent,
     NavbarComponent,
-    PaginationComponent
+    PaginationComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
