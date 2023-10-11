@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 
 
@@ -14,7 +15,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
   FooterComponent,
   NavbarComponent,
   PaginationComponent,
-  SpinnerComponent],
+  SpinnerComponent,
+  ScrollToTopComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -23,7 +25,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FooterComponent,
     NavbarComponent,
     PaginationComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ScrollToTopComponent
   ]
 })
 export class SharedModule { }
