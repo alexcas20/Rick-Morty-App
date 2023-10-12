@@ -39,7 +39,8 @@
                           <span>{{ character?.status }}</span>
                         </div>
                       </ng-template>
-            
+
+                      
                     
             
                       <div
@@ -47,6 +48,9 @@
                         *ngIf="character?.gender?.toLowerCase() === 'male'; else female"> 
                          <p class="card-text">Gender: Male</p>
                       </div>
+
+                      <span class="location">Planet: {{character?.origin?.name}}</span>
+            
             
                       <span class="location">Location: {{ character?.location?.name }}</span>
                 </div>
