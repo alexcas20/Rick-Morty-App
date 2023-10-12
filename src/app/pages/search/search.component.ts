@@ -20,6 +20,8 @@ export class SearchComponent implements OnInit {
   charactersSearch: any[] = [];
   pagesTotal: any;
 
+
+
  
 
   constructor(private api: ApiServiceService,
@@ -73,6 +75,7 @@ export class SearchComponent implements OnInit {
       .subscribe(resp => {
         console.log(resp);
         [...this.charactersSearch] = resp.results;
+        
       })
       this.p = event;
   } 
@@ -94,18 +97,16 @@ export class SearchComponent implements OnInit {
 
   }
 
-  // enterSearch(event:any){
-  //   if(event.keyCode == 13){
-  //     this.searchCh()
-  //   }
-  // }
+ 
 
-  fnStatus(status:any){
-    if(status === 'Alive'){
-      return 'badge bg-success'
-    } else if(status === 'Dead'){
-      return 'badge bg-danger'
-    } else return 'badge bg-info'
-  }
+      
+     
+      
+    
+    }
 
-}
+   
+
+    
+
+

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrandComponent } from './brand/brand.component';
 import { SearchComponent } from './search/search.component';
 import { CharacterComponent } from './character/character.component';
+import { FiltersComponent } from './filters/filters.component';
 
 const routes: Routes = [
   {path: '', component: BrandComponent, children: [
     {path: 'search', component: SearchComponent},
-    {path: 'character/:id', component: CharacterComponent}
+    {path: 'character/:id', component: CharacterComponent},
+    {path: 'filters', component: FiltersComponent}
   ]}
   
 ];

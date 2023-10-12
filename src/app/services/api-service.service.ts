@@ -9,11 +9,11 @@ import { Observable } from 'rxjs';
 
 export class ApiServiceService {
 
-  private api = ' https://rickandmortyapi.com/api';
+  private api = ' https://rickandmortyapi.com/api/character';
 
   private readonly CHARACTER_PAGE = 'https://rickandmortyapi.com/api/character/?page=';
-  // private readonly CHARACTER_NAME = 'https://rickandmortyapi.com/api/character/?name=';
-  private readonly CHARACTER_NAME = 'https://rickandmortyapi.com/api/character/?page=';
+ 
+  // private readonly CHARACTER_NAME = 'https://rickandmortyapi.com/api/character/?page=';
 
 
   
@@ -21,8 +21,10 @@ export class ApiServiceService {
 
   constructor( private http: HttpClient) { }
 
+
+
   getCharacters(id:number):Observable<any>{
-    const dir = `${this.api}/character/${id}`
+    const dir = `${this.api}/${id}`
   
     return this.http.get<any>(dir);
   }
@@ -35,8 +37,14 @@ export class ApiServiceService {
   }
 
   getCharacterName(name:string,page:number):Observable<any>{
-    const dir = this.CHARACTER_NAME +   page + '&name=' + name;
+    const dir = this.CHARACTER_PAGE +   page + '&name=' + name;
     return this.http.get<any>(dir);
+  }
+
+  getCharactersStatus(status:string, page:number): Observable<any>{
+    const dir = this.CHARACTER_PAGE + page + '&status=' + status;
+    console.log('Direccion status -> '+dir);
+    return this.http.get<any>(dir)
   }
 
  

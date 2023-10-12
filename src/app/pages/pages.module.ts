@@ -7,10 +7,11 @@ import { BrandComponent } from './brand/brand.component';
 import { CharacterComponent } from './character/character.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { FiltersComponent } from './filters/filters.component';
 
 
 @NgModule({
-  declarations: [SearchComponent, BrandComponent, CharacterComponent],
+  declarations: [SearchComponent, BrandComponent, CharacterComponent, FiltersComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

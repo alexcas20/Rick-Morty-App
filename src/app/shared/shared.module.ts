@@ -6,6 +6,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { SharedCardComponent } from './shared-card/shared-card.component';
 
 
 
@@ -16,7 +17,8 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
   NavbarComponent,
   PaginationComponent,
   SpinnerComponent,
-  ScrollToTopComponent],
+  ScrollToTopComponent,
+  SharedCardComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -26,7 +28,8 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     NavbarComponent,
     PaginationComponent,
     SpinnerComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    SharedCardComponent
   ]
 })
 export class SharedModule { }

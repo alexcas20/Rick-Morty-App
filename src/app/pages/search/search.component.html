@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="container" *ngIf="!busqueda;else filterCh">
+<!-- <div class="container" *ngIf="!busqueda;else filterCh">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of arrayCharacters">
             <div class="card" routerLink="/pages/character/{{item.id}}">
@@ -24,27 +24,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<app-shared-card [arrayCharacters]="arrayCharacters" *ngIf="!busqueda; else filterCh"></app-shared-card>
+
 <br>
 <br>
 
 <ng-template #filterCh >
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-4 col-md-6 col-sm-8" *ngFor="let item of charactersSearch">
-                <div class="card" routerLink="/pages/character/{{item.id}}">
-                    <img class="img-fluid" [src]="item.image" alt="">
-                    <div class="card-title">{{item.name}}</div>
-                    <div class="card-body">
-                        <span [ngClass]="fnStatus(item.status)"> <p>{{item.status}}</p></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-shared-card [arrayCharacters]="charactersSearch"></app-shared-card>
     <br>
     <br>
-</ng-template>
+</ng-template> 
 
 
 <app-pagination [p]="p" [pagesT]="pagesTotal" (actualPageEmitter)="pageChanged($event)"></app-pagination>
