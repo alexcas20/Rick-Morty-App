@@ -15,11 +15,22 @@ export class FiltersComponent implements OnInit {
   filtro = false;
   statusGlobal = '';
 
+  arrayLocations: any[] = [];
+  locations: any[] = [];
+  respLocations: any[] =[];
+
+  response:  any[] = [];
+
   constructor(private api: ApiServiceService) { }
 
   ngOnInit(): void {
 
-    this.pageChanged(this.p)
+    this.pageChanged(this.p);
+
+
+    //Select array 
+    this.fnArrayLocations();
+   
   }
 
   pageChanged(event:any){
@@ -53,7 +64,7 @@ export class FiltersComponent implements OnInit {
       .subscribe(resp => {
         
        [...this.characters] = resp.results;
-       this.pagesTotal = resp.info.pages;
+        this.pagesTotal = resp.info.pages;
 
        
       })
@@ -69,6 +80,68 @@ export class FiltersComponent implements OnInit {
       return 'active'
     
   }
+
+
+  fnArrayLocations(): void{
+    for(let i=1; i<=126;i++){
+      this.arrayLocations.push(i);
+       
+    }
+    console.log(this.arrayLocations);
+
+    this.api.getLocations(this.arrayLocations)
+      .subscribe(resp => {
+        console.log(resp)
+        this.locations = resp;
+        console.log( this.locations);
+
+      })
+  }
+
+  searchLocation(location:string){
+
+   
+    
+      this.api.getLocations(location)
+        .subscribe(resp => {
+          console.log(resp);
+          const data = resp.residents;
+          console.log(data)
+          this.response = [];
+          data.map((element:any) => {
+            //get number of string and pass it in the petition
+            const id = element.replace(/[^0-9]+/g, "");
+            console.log(id)
+              this.api.getCharacters(parseInt(id))
+                .subscribe(resp => {
+                  this.response.push(resp);
+                  console.log(this.response)
+
+                })
+              
+          });
+
+        
+
+          this.characters = this.response;
+
+          console.log(this.characters)
+
+
+
+        })
+
+        
+
+      
+
+      
+
+      
+  }
+
+
+  
 
 
 

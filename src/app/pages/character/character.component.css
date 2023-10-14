@@ -8,7 +8,7 @@
 }
 
 .btn-search{
-    background-color: #62c511cc;
+    background-color: #70ee09e7;
 }
 
 .btn:hover{
@@ -24,21 +24,14 @@
 .card{
     color: #fff;
     transition: all ease-in .5s;
-    background-color: rgb(39, 39, 39);
-    box-shadow: 2px 15px 30px #000;
+    background-color: rgba(15, 15, 15, 0.8);
+    box-shadow: 2px 15px 30px rgba(37, 201, 4, 0.511);
     height: auto;
  
 }
 
-
-
-
-
-
-
 .card-data{
     
-   
 
     text-align: center;
   

@@ -31,8 +31,8 @@
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <select class="form-select" name="" id="">
-                        <option value="">Hola</option>
+                      <select class="form-select" name="" id="" ngModel (ngModelChange)="searchLocation($event)">
+                        <option *ngFor="let location of locations" [ngValue]="location.id">{{location.name}}</option>
                       </select>
                     </div>
                   </div>

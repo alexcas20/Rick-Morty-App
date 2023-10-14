@@ -5,25 +5,28 @@
   </div>
   
 
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center mb-5">
     <div
-      class="col-lg-4 col-md-6 col-sm-8"
+      class="col-lg-4 col-md-6 col-sm-12"
       *ngFor="let item of arrayCharacters">
       <div class="card">
         <img
           [src]="item.image"
           [alt]="item.image"
           class="card-image img-fluid rounded mx-auto d-block" />
-        <span class="specie">{{ item.species }}</span>
+       
         <div class="card-body">
          
-
           <h5 class="card-title">{{ item.name }}</h5>
 
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-warning"
-          routerLink="/pages/character/{{item.id}}">More</button>
+          <div class="card__overlay">
+            <div class="overlay__text">
+            
+              
+              <button routerLink="/pages/character/{{item.id}}" class="button">Show More</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

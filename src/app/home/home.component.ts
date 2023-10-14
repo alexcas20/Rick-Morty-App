@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private api: ApiServiceService,
     private route: Router) { }
 
-  arrayCharactersNumber: number[] = [1,2,3,4,5,6,7,8,9];
+  arrayCharactersNumber: number[] = [1,2,3,4,5,6,7,8,9,10, 11 ,12];
   arrayCharacters: any[] = [];
 
   ngOnInit(): void {

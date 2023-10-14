@@ -15,6 +15,8 @@ export class ApiServiceService {
  
   // private readonly CHARACTER_NAME = 'https://rickandmortyapi.com/api/character/?page=';
 
+  private readonly LOCATIONS = 'https://rickandmortyapi.com/api/location/';
+
 
   
   
@@ -25,7 +27,7 @@ export class ApiServiceService {
 
   getCharacters(id:number):Observable<any>{
     const dir = `${this.api}/${id}`
-  
+    console.log('Dir ---> '+ dir);
     return this.http.get<any>(dir);
   }
 
@@ -45,6 +47,12 @@ export class ApiServiceService {
     const dir = this.CHARACTER_PAGE + page + '&status=' + status;
     console.log('Direccion status -> '+dir);
     return this.http.get<any>(dir)
+  }
+
+  getLocations(parameters:any):Observable<any>{
+    const dir = this.LOCATIONS + parameters;
+    console.log(dir);
+    return this.http.get<any>(dir);
   }
 
  
