@@ -52,19 +52,28 @@
   
 }
 
-.card-data .card-body .status{
+.status{
     font-size: 1.5rem;
     color: rgb(12, 151, 7);
     letter-spacing: 2px;
    
 }
 
-.card-data .card-body .statusN{
+ .statusD{
     font-size: 1.8rem;
     color: rgb(236, 23, 23);
     letter-spacing: 2px;
     padding: 0 0 2px 0;
 }
+
+.statusI{
+    font-size: 1.8rem;
+    color: rgb(0, 107, 247);
+    letter-spacing: 2px;
+    padding: 0 0 2px 0;
+}
+
+
 
 .card-data .card-body .gender .card-text{
     

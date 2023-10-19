@@ -4,27 +4,14 @@
             <div class="input-group">
                 <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                 [(ngModel)]="inputCh"
-                aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-success" (click)="searchCh(inputCh)">search</button>
+                aria-describedby="search-addon" 
+                (keypress)="searchByKey($event)"/>
+                <button type="button" class="btn btn-outline-success" (click)="searchCh()">search</button>
               </div>
         </div>
     </div>
 </div>
 
-
-<!-- <div class="container" *ngIf="!busqueda;else filterCh">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of arrayCharacters">
-            <div class="card" routerLink="/pages/character/{{item.id}}">
-                <img class="img-fluid" [src]="item.image" alt="">
-                <div class="card-title">{{item.name}}</div>
-                <div class="card-body">
-                    <span [ngClass]="fnStatus(item.status)"> <p>{{item.status}}</p></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 <app-shared-card [arrayCharacters]="arrayCharacters" *ngIf="!busqueda; else filterCh"></app-shared-card>
 
 <br>

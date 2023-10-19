@@ -12,9 +12,19 @@
     box-shadow: 2px 3px 25px  rgba(4, 235, 35, 0.63);
 }
 
-.input-group button:hover{
 
-    background-color: rgba(4, 235, 35, 0.63) ;
+
+/* Button */
+
+.btn{
+    color: #fff;
+    background-color:  rgba(5, 202, 31, 0.726);
+    transition: all .2s ease-in;
+}
+
+.input-group button:hover{
+    padding: 0rem 1rem 0 1rem;
+    background-color: rgb(5, 218, 33) ;
 }
 
 

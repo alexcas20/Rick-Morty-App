@@ -23,11 +23,19 @@ export class CharacterComponent implements OnInit {
     this.api.getCharacters(this.id)
       .subscribe(resp => {
         this.character = resp;
-        console.log(resp)
+       
       })
 
 
 
+  }
+
+  status(status: string){
+    if(status === 'Alive'){
+      return 'status'
+    } else if (status === 'Dead'){
+      return 'statusD'
+    } else return 'statusI'
   }
 
 }

@@ -29,17 +29,11 @@
                 <span class="specie">{{ character?.species }}</span>
 
                 <div class="card-body">
-                    <div class="status" *ngIf="character?.status === 'Alive' ; else statusN">
+                    <div class="status" [ngClass]="status(character?.status)">
                         <span>{{ character?.status }}</span>
                       </div>
             
-                      <!-- StatusN -->
-                      <ng-template #statusN>
-                        <div class="statusN">
-                          <span>{{ character?.status }}</span>
-                        </div>
-                      </ng-template>
-
+                     
                       
                     
             
