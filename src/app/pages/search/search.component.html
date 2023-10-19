@@ -14,8 +14,7 @@
 
 <app-shared-card [arrayCharacters]="arrayCharacters" *ngIf="!busqueda; else filterCh"></app-shared-card>
 
-<br>
-<br>
+
 
 <ng-template #filterCh >
     <app-shared-card [arrayCharacters]="charactersSearch"></app-shared-card>

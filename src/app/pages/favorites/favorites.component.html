@@ -1,0 +1,36 @@
+
+<div class="container">
+
+    <h2>Your Favorite Characters are Here</h2>
+    <div class="clearAllButton d-flex justify-content-center mb-5">
+        <button class="btn btn-danger" *ngIf="favoritesCharacters.length>0" (click)="deleteAll()">Clear all Favorites</button>
+    </div>
+   
+    <div class="row" *ngIf="favoritesCharacters.length > 0; else noFavorites">
+        <div class="col-4">
+            <div class="card" *ngFor="let character of favoritesCharacters" >
+                <div class="buttons d-flex justify-content-end">
+                    <button class="btn btn-outline-danger"  (click)="delete(character.id)">Delete</button>
+                </div>
+                <img class="img-fluid img-rounded" [src]="character.image" [alt]="character.image">
+                <div class="card-body">
+                    <span>{{character.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noFavorites>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <h2>
+                     Add characters to favorites ...
+                </h2>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+

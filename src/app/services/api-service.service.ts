@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +17,26 @@ export class ApiServiceService {
 
   private readonly LOCATIONS = 'https://rickandmortyapi.com/api/location/';
 
+  private currentPage : any;
+
+  
+
 
   
   
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient) { 
+
+    this.currentPage = new BehaviorSubject<string>('');
+  }
+
+  setValue(value : string){
+    this.currentPage.next(value);
+  }
+
+  getValue(value : string){
+    return this.currentPage.asObservable();
+  }
 
 
 

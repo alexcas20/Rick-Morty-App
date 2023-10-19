@@ -25,6 +25,10 @@
         <div class="col-lg-3 col-md-6 col-sm-4 col-xs-5">
            
             <div class="card card-data">
+                <span class="d-flex justify-content-end favorite">
+                  <i class="fa-solid fa-heart" 
+                  (click)="addToFavorites(character)"></i>
+                </span>
                 <h5 class="card-title">{{ character?.name }}</h5>
                 <span class="specie">{{ character?.species }}</span>
 

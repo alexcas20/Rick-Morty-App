@@ -8,10 +8,11 @@ import { CharacterComponent } from './character/character.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { FiltersComponent } from './filters/filters.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
-  declarations: [SearchComponent, BrandComponent, CharacterComponent, FiltersComponent],
+  declarations: [SearchComponent, BrandComponent, CharacterComponent, FiltersComponent, FavoritesComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

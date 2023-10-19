@@ -9,7 +9,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CharacterComponent implements OnInit {
 
-  character: any;
+  character:any;
   id!:number;
 
   constructor(private api: ApiServiceService, private route: ActivatedRoute) { }
@@ -36,6 +36,36 @@ export class CharacterComponent implements OnInit {
     } else if (status === 'Dead'){
       return 'statusD'
     } else return 'statusI'
+  }
+
+
+  addToFavorites(character:any){
+    console.log(character);
+
+    let fav = localStorage.getItem('favorites') || "[]";
+    fav = JSON.parse(fav);
+
+    console.log(fav);
+    let listaFav = Array.from(fav)
+
+    let postLista = listaFav.findIndex((e:any) => {
+      return e.id == character.id;
+     });
+
+  
+
+    if(postLista > -1){
+      //find element 
+      listaFav.splice(postLista,1);
+    } else{
+      //dont find element
+      listaFav.push(character)
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(listaFav));
+    
+
+    return 'addFavorite';
   }
 
 }

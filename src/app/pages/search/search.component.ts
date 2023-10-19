@@ -57,6 +57,7 @@ export class SearchComponent implements OnInit {
       this.p = event;
     } else {
       console.log(this.busqueda);
+      
       this.api.getCharactersPage(event).subscribe(resp => {
         console.log(resp);
         this.pagesTotal = resp.info.pages;

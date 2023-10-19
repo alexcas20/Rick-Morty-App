@@ -41,9 +41,9 @@
 
 
 .card-data h5{
-    padding: 2rem 0 0 0;
+    padding: 0.5rem 0 0 0;
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.8rem;
    
 }
 
@@ -86,4 +86,27 @@
     padding: 10px 0;
     font-size: 1.2rem;
     text-align: center;
+}
+
+/* Favorite */
+
+.favorite{
+    cursor: pointer;
+    padding: 0.5rem 0.5rem 0 0;
+    transition: all .3s ease-in-out;
+}
+
+
+.favorite i{
+    font-size: 1.2rem;
+}
+
+.addFavorite{
+    color: #fd0404;
+}
+
+
+.favorite i:hover {
+    transform: scale(1.2);
+    color: #fd0404;
 }

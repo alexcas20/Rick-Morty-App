@@ -1,0 +1,30 @@
+h2{
+    text-transform: uppercase;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    font-size: 3.5rem; 
+    color: #08BC31; 
+    text-shadow: 0 1px 0 rgb(223, 172, 6), 0 2px 0 rgb(223, 171, 6), 0 3px 0 rgb(224, 172, 6), 0 4px 0  rgb(224, 174, 6), 0 5px 0  rgb(224, 178, 6), 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    margin: 2rem 0 4rem 0;
+}
+
+.card{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: rgba(8, 8, 8, 0.103);
+    box-shadow: 2px 2px 20px #08BC31;
+    backdrop-filter: blur(5px); 
+}
+
+.card img{
+    padding: 1rem;
+}
+
+.buttons{
+ 
+    padding: .5rem .5rem 0 0;
+}
