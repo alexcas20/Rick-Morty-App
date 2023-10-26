@@ -2,12 +2,16 @@
 <div class="container">
 
     <div class="buttons d-flex justify-content-center mb-5">
-        <button class="btn btn-success btn-search"  [routerLink]="['/home']">
+        <button class="btn  btn-home"  [routerLink]="['/home']">
             Back to  <i class="fa-solid fa-home"></i>
         </button>
-        <button class="btn btn-info" [routerLink]="['/pages/search']">
+        <button class="btn  btn-search" [routerLink]="['/pages/search']">
             Back to <i class="fa-solid fa-search" ></i>
         </button>
+        <button class="btn  btn-favs" [routerLink]="['/pages/favorites']">
+          Favs <i class="fa-solid fa-heart" ></i>
+      </button>
+     
     </div>
    
     
@@ -25,10 +29,15 @@
         <div class="col-lg-3 col-md-6 col-sm-4 col-xs-5">
            
             <div class="card card-data">
+              <div class="favoriteDiv" *ngIf="!listF; else favorite">
                 <span class="d-flex justify-content-end favorite">
-                  <i class="fa-solid fa-heart" 
+                  <i [ngClass]="isFav()"
                   (click)="addToFavorites(character)"></i>
                 </span>
+
+               
+              </div>
+                
                 <h5 class="card-title">{{ character?.name }}</h5>
                 <span class="specie">{{ character?.species }}</span>
 
@@ -63,4 +72,12 @@
         </div>
       </ng-template>
     </div>
+
+    <ng-template #favorite >
+      <div >
+        <span class="d-flex justify-content-end selectFavorite ">
+          <i class="fa-solid fa-heart"></i>
+        </span>
+      </div>
+    </ng-template>
     

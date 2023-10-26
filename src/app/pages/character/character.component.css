@@ -3,16 +3,30 @@
 
 .btn{
    margin: 0 .3rem;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
+    color: #fff;
+   background-color: rgba(8, 8, 8, 0.61);
+    box-shadow: 2px 2px 10px #22ff059a;
    
 }
 
-.btn-search{
-    background-color: #70ee09e7;
-}
+
 
 .btn:hover{
     transform: scale(1.1);
+}
+
+.btn-home:hover{
+    background-color: rgba(37, 201, 4, 0.611);
+}
+.btn-search:hover{
+    background-color: rgba(4, 50, 201, 0.611);
+}
+.btn-filters:hover{
+    background-color: rgba(243, 227, 8, 0.611);
+}
+.btn-favs:hover{
+    background-color: rgba(238, 5, 5, 0.611);
 }
 
 
@@ -90,6 +104,10 @@
 
 /* Favorite */
 
+.fav{
+    color: #fd0404;
+}
+
 .favorite{
     cursor: pointer;
     padding: 0.5rem 0.5rem 0 0;
@@ -101,12 +119,22 @@
     font-size: 1.2rem;
 }
 
-.addFavorite{
-    color: #fd0404;
-}
+ 
 
 
 .favorite i:hover {
     transform: scale(1.2);
     color: #fd0404;
 }
+
+.selectFavorite{
+    color:#fd0404;
+   
+}
+
+.selectFavorite i {
+    font-size: 1.5rem;
+    padding: 5px;
+   
+}
+

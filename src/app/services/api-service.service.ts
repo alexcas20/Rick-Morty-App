@@ -10,7 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class ApiServiceService {
 
   private api = ' https://rickandmortyapi.com/api/character';
-
+  private apiparams = ' https://rickandmortyapi.com/api/character/';
   private readonly CHARACTER_PAGE = 'https://rickandmortyapi.com/api/character/?page=';
  
   // private readonly CHARACTER_NAME = 'https://rickandmortyapi.com/api/character/?page=';
@@ -62,6 +62,20 @@ export class ApiServiceService {
     const dir = this.CHARACTER_PAGE + page + '&status=' + status;
     console.log('Direccion status -> '+dir);
     return this.http.get<any>(dir)
+  }
+
+  getCharactersStatusExample(query: any): Observable<any>{
+    const dir = this.apiparams + '?';
+    console.log(query);
+    let httpParams = new HttpParams();
+    Object.keys(query).forEach(function (key) {
+      httpParams = httpParams.append(key, query[key]);
+    });
+    
+  
+   
+    console.log('Direccion status -> '+dir + httpParams);
+    return this.http.get<any>(dir + httpParams)
   }
 
   getLocations(parameters:any):Observable<any>{

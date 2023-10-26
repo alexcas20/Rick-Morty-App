@@ -1,11 +1,18 @@
-<div class="pagination mb-4">
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col">
+            <div class="pagination mb-4">
 
-    <span *ngIf="p !== 1"  class="pagination__btn" (click)="changePage(p - 1)">
-        <i class="fa-solid fa-chevron-left"></i>
-    </span>
-    <span class="pagination__page">{{p}}/{{pagesT}}</span>
-    <span [ngClass]="checkTopPage(p)"  class="pagination__btn"
-    (click)="changePage(p + 1)">
-    <i class="fa-solid fa-chevron-right"></i>
-    </span>
-  </div>
+                <span *ngIf="p !== 1"  class="pagination__btn" (click)="changePage(p - 1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <span class="pagination__page">{{p}}/{{pagesT}}</span>
+                <span [ngClass]="checkTopPage(p)"  class="pagination__btn"
+                (click)="changePage(p + 1)">
+                <i class="fa-solid fa-chevron-right"></i>
+                </span>
+              </div>
+        </div>
+    </div>
+   
+</div>

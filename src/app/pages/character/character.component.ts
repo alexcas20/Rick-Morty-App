@@ -11,6 +11,9 @@ export class CharacterComponent implements OnInit {
 
   character:any;
   id!:number;
+  btnFav = false;
+
+  listF = false;
 
   constructor(private api: ApiServiceService, private route: ActivatedRoute) { }
 
@@ -25,6 +28,8 @@ export class CharacterComponent implements OnInit {
         this.character = resp;
        
       })
+
+      this.notFavorite(this.id);
 
 
 
@@ -63,9 +68,34 @@ export class CharacterComponent implements OnInit {
     }
 
     localStorage.setItem('favorites', JSON.stringify(listaFav));
-    
+    this.btnFav = true
 
-    return 'addFavorite';
+  
+  }
+
+  // Class
+  isFav(): any{
+    if(this.btnFav)
+      return 'fa-solid fa-heart fav'
+    else return 'fa-solid fa-heart'
+  }
+
+  notFavorite(i: number){
+    console.log(i)
+   let fav = localStorage.getItem('favorites') || "[]";
+   let arrayL =  JSON.parse(fav);
+   
+    console.log('array', arrayL)
+    let checkFavorites = Array.from(arrayL);
+
+    checkFavorites.forEach((el: any) => {
+      if(el.id == i ){
+        this.listF = true
+      }
+    })
+   
+
+    console.log(this.listF)
   }
 
 }

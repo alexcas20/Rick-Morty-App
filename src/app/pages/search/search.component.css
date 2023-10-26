@@ -27,5 +27,37 @@
     background-color: rgb(5, 218, 33) ;
 }
 
+/* Filter */
+
+
+.accordion-button{
+    color: #fff;
+    background-color: rgba(8, 8, 8, 0.61); 
+    box-shadow: 2px 2px 10px #2bf80280;
+}
+
+.accordion-item{
+    background-color: rgba(8, 8, 8, 0.61);
+    color: #fff;
+    box-shadow: 2px 2px 10px #2bf80280;
+}
+
+.btn-filter{
+    background-color: rgba(8, 8, 8, 0.61);
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 15px;
+    color: #6ddd03c0;
+}
+
+.btn-filter:hover{
+    border: 1px solid #fafff9;
+}
+
+.active{
+    border: 1px solid #fff;
+}
+
+
 
 
