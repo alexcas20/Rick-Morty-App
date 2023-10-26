@@ -13,13 +13,13 @@
  
  </div>
  <div class="menu">
-  <a [routerLink]="['/home']">
+  <a [routerLink]="['/home']" (click)="scrollToTop()">
     <i class="fa-solid fa-house"> Home</i>
   </a>
-  <a [routerLink]="['/pages/search']">
+  <a [routerLink]="['/pages/search']" (click)="scrollToTop()">
     <i class="fa-solid fa-search"> Search</i>
   </a>
-  <a [routerLink]="['pages/favorites']"  >
+  <a [routerLink]="['pages/favorites']"  (click)="scrollToTop()" >
     <i class="fa-solid fa-heart"> Favorites</i>
   </a>
  </div>
