@@ -1,4 +1,4 @@
-![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/79a36514-56ca-405c-ba69-ee70b5198b66)# RickMortyApp
+# RickMortyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
@@ -9,15 +9,23 @@ Rick and Morty wiki, filter and look for a character you like.
 https://rickandmortyapi.com/
 
 # Captures
-----------------------------------Home--------------------------------------------------------------------\n
+----------------------------------Home--------------------------------------------------------------------
+
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/98fce2bc-e622-4e97-8533-5fd3c364720f)
-----------------------------------Search------------------------------------------------------------------\n
+
+----------------------------------Search------------------------------------------------------------------
+
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/e571a533-2c56-4535-ba20-35300e9eee86)
-----------------------------------Search with Filters-----------------------------------------------------\n
+
+----------------------------------Search with Filters-----------------------------------------------------
+
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/c6c4f268-ec33-4cc7-a0e3-c05590e8d66a)
-----------------------------------Character info----------------------------------------------------------\n
+
+----------------------------------Character info----------------------------------------------------------
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/d4c771d4-5e4e-48ca-a44b-8278202be501)
-----------------------------------Favorites----------------------------------------------------------\n
+
+----------------------------------Favorites----------------------------------------------------------
+
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/fc73991d-4f33-4a3f-854b-b13ec8154bc3)
 
 # Dependencies
