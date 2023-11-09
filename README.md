@@ -30,6 +30,7 @@ https://rickandmortyapi.com/
 
 # Dependencies
 https://sweetalert2.github.io/
+
 Bootstrap 5
 
 ## Development server
