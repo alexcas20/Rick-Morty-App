@@ -53,9 +53,9 @@ export class FavoritesComponent implements OnInit {
         
     let array = JSON.parse(this.values);
     let result =  array.findIndex((element:any) => {
-        console.log(element);
+     
 
-        console.log( element.id  === id);
+      
       return element.id === id;
       })
 
@@ -63,6 +63,9 @@ export class FavoritesComponent implements OnInit {
 
         this.favoritesCharacters.splice(result,1);
         localStorage.setItem('favorites', JSON.stringify(this.favoritesCharacters));
+        if(this.favoritesCharacters.lenght <= 1){
+          this.favoritesCharacters = [];
+        }
       } 
       
       }

@@ -54,12 +54,12 @@ export class CharacterComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-    console.log(character);
+   
 
     let fav = localStorage.getItem('favorites') || "[]";
     fav = JSON.parse(fav);
 
-    console.log(fav);
+  
     let listaFav = Array.from(fav)
 
     let postLista = listaFav.findIndex((e:any) => {
@@ -90,11 +90,11 @@ export class CharacterComponent implements OnInit {
   }
 
   notFavorite(i: number){
-    console.log(i)
+   
    let fav = localStorage.getItem('favorites') || "[]";
    let arrayL =  JSON.parse(fav);
    
-    console.log('array', arrayL)
+   
     let checkFavorites = Array.from(arrayL);
 
     checkFavorites.forEach((el: any) => {
@@ -104,7 +104,7 @@ export class CharacterComponent implements OnInit {
     })
    
 
-    console.log(this.listF)
+  
   }
 
   redirectPage(){

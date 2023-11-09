@@ -44,14 +44,14 @@ export class SearchComponent implements OnInit {
     this.filtro = false;
     this.statusGlobal = '';
     this.character = tipadoCh;
-    console.log(tipadoCh);
+   
    
 
     this.api.getCharacterName(this.character, 1).subscribe(resp => {
       this.busqueda = true;
       this.pagesTotal = resp.info.pages;
       this.charactersSearch = resp.results;
-      console.log(resp);
+      
     }, (error) => {
       Swal.fire({
         icon: "error",
@@ -72,9 +72,9 @@ export class SearchComponent implements OnInit {
 
   pageChanged(event: any): void {
     if (this.busqueda && !this.filtro) {
-      console.log(this.busqueda);
+     
       this.api.getCharacterName(this.character, event).subscribe(resp => {
-        console.log(resp);
+        
         [...this.charactersSearch] = resp.results;
       });
       this.p = event;
@@ -90,7 +90,7 @@ export class SearchComponent implements OnInit {
       }
      
       this.api.getCharactersStatusExample(this.params).subscribe(resp => {
-        console.log(this.arrayCharacters);
+        
         [...this.charactersSearch] = resp.results;
         this.pagesTotal = resp.info.pages;
       });
@@ -101,10 +101,10 @@ export class SearchComponent implements OnInit {
     
     
     else  {
-      console.log(this.busqueda);
+     
      
       this.api.getCharactersPage(event).subscribe(resp => {
-        console.log(resp);
+       
         this.pagesTotal = resp.info.pages;
         this.arrayCharacters = resp.results;
       });
@@ -126,7 +126,7 @@ export class SearchComponent implements OnInit {
     this.btnActive(st);
     this.filtro = true;
     this.statusGlobal = st;
-    console.log('status --->', st);
+   
      this.params = {
       page: this.p,
       name: this.character,
@@ -134,8 +134,7 @@ export class SearchComponent implements OnInit {
       gender: this.gender
     }
     this.api.getCharactersStatusExample(this.params).subscribe(resp => {
-      console.log(this.charactersSearch);
-      console.log(resp);
+     
       [...this.charactersSearch] = resp.results;
       this.pagesTotal = resp.info.pages;
 
@@ -165,8 +164,7 @@ export class SearchComponent implements OnInit {
       gender: this.gender
     }
     this.api.getCharactersStatusExample(this.params).subscribe(resp => {
-      console.log(this.charactersSearch);
-      console.log(resp);
+     
       [...this.charactersSearch] = resp.results;
       this.pagesTotal = resp.info.pages;
 
