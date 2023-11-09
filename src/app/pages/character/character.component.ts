@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../../services/api-service.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-character',
@@ -45,6 +46,14 @@ export class CharacterComponent implements OnInit {
 
 
   addToFavorites(character:any){
+
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: character.name + " Added to favorites!",
+      showConfirmButton: false,
+      timer: 1500
+    })
     console.log(character);
 
     let fav = localStorage.getItem('favorites') || "[]";

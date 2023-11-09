@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SpinnerService } from 'src/app/shared/spinner/spinner.service';
 import { ApiServiceService } from '../../services/api-service.service';
 import { Subject } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-search',
@@ -38,13 +39,20 @@ export class SearchComponent implements OnInit {
     this.statusGlobal = '';
     this.character = tipadoCh;
     console.log(tipadoCh);
-    this.busqueda = true;
+   
 
     this.api.getCharacterName(this.character, 1).subscribe(resp => {
       this.busqueda = true;
       this.pagesTotal = resp.info.pages;
       this.charactersSearch = resp.results;
       console.log(resp);
+    }, (error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Character's name not found",
+        text: "Type a valid character's name"
+      })
+      this.busqueda = false;
     });
 
     this.inputCh = '';

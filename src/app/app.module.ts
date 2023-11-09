@@ -10,6 +10,8 @@ import { SharedModule } from './shared/shared.module';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

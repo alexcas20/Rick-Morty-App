@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-favorites',
@@ -27,6 +28,27 @@ export class FavoritesComponent implements OnInit {
 
 
   delete(id:number){
+  
+    
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: "top-end",
+          title: "Deleted!",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1200
+        });
+
+        
     let array = JSON.parse(this.values);
     let result =  array.findIndex((element:any) => {
         console.log(element);
@@ -36,15 +58,60 @@ export class FavoritesComponent implements OnInit {
       })
 
       if(result > -1){
+
         this.favoritesCharacters.splice(result,1);
         localStorage.setItem('favorites', JSON.stringify(this.favoritesCharacters));
-      } else {
+      } 
+      
+      }
+      else if(result.dismiss === Swal.DismissReason.cancel){
+       
+        Swal.fire({
+          title: "Check your actions!",
+          icon: "info"
+        });
+
         this.getValuesLocal();
       }
+    });
+
+
   }
 
   deleteAll(){
+
+     
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete all!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          position: "top-end",
+          title: "Deleted!",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1200
+        });
+
+
     this.favoritesCharacters = [];
     localStorage.removeItem('favorites');
+  }  else if(result.dismiss === Swal.DismissReason.cancel){
+       
+    Swal.fire({
+      title: "Check your actions!",
+      icon: "info"
+    });
+
+    this.getValuesLocal();
+  }
+});
+
   }
 }
