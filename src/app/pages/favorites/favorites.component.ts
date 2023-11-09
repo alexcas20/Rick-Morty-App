@@ -14,6 +14,8 @@ export class FavoritesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    localStorage.removeItem("page");
     
     this.getValuesLocal();
 

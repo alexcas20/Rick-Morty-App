@@ -18,6 +18,7 @@ export class SearchComponent implements OnInit {
   busqueda = false;
   charactersSearch: any[] = [];
   pagesTotal: any;
+  pageStorage : any;
 
   //Filters
 
@@ -30,12 +31,16 @@ export class SearchComponent implements OnInit {
   constructor(private api: ApiServiceService) {}
 
   ngOnInit(): void {
+    if(localStorage.getItem("page")){
+      this.pageChanged(Number(localStorage.getItem("page")));
+    }
     this.pageChanged(this.p);
   }
 
   searchCh() {
     const tipadoCh = this.inputCh.toLocaleLowerCase();
     this.p = 1;
+    localStorage.setItem("page", this.p.toString());
     this.filtro = false;
     this.statusGlobal = '';
     this.character = tipadoCh;
@@ -73,6 +78,8 @@ export class SearchComponent implements OnInit {
         [...this.charactersSearch] = resp.results;
       });
       this.p = event;
+      this.pageStorage = localStorage.setItem("page",this.p.toString());
+
 
     } else if(this.filtro){
       this.params = {
@@ -88,6 +95,7 @@ export class SearchComponent implements OnInit {
         this.pagesTotal = resp.info.pages;
       });
       this.p = event;
+      this.pageStorage = localStorage.setItem("page",this.p.toString());
     
     }
     
@@ -102,6 +110,7 @@ export class SearchComponent implements OnInit {
       });
 
       this.p = event;
+      this.pageStorage = localStorage.setItem("page",this.p.toString());
     
   }
 }

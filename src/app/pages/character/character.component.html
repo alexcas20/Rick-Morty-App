@@ -2,7 +2,7 @@
 <div class="container">
 
     <div class="buttons d-flex justify-content-center mb-5">
-        <button class="btn  btn-home"  [routerLink]="['/home']">
+        <button class="btn  btn-home" (click)="redirectPage()"  [routerLink]="['/home']">
             Back to  <i class="fa-solid fa-home"></i>
         </button>
         <button class="btn  btn-search" [routerLink]="['/pages/search']">

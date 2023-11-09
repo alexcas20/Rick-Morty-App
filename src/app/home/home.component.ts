@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+    localStorage.removeItem("page");
+
     this.arrayCharactersNumber.forEach( el => {
       this.api.getCharacters(el)
         .subscribe(resp => {

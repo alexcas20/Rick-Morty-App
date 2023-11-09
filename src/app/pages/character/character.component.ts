@@ -107,4 +107,8 @@ export class CharacterComponent implements OnInit {
     console.log(this.listF)
   }
 
+  redirectPage(){
+    localStorage.removeItem("page");
+  }
+
 }
