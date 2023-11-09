@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
   filtro = false;
   params: {} = {}
   genders = ['female', 'male', 'genderless', 'uknown'];
+  gender = "";
 
   constructor(private api: ApiServiceService) {}
 
@@ -77,7 +78,8 @@ export class SearchComponent implements OnInit {
       this.params = {
         page: event,
         name: this.character,
-        status: this.statusGlobal
+        status: this.statusGlobal,
+        gender: this.gender
       }
      
       this.api.getCharactersStatusExample(this.params).subscribe(resp => {
@@ -119,7 +121,8 @@ export class SearchComponent implements OnInit {
      this.params = {
       page: this.p,
       name: this.character,
-      status: this.statusGlobal
+      status: this.statusGlobal,
+      gender: this.gender
     }
     this.api.getCharactersStatusExample(this.params).subscribe(resp => {
       console.log(this.charactersSearch);
@@ -127,12 +130,48 @@ export class SearchComponent implements OnInit {
       [...this.charactersSearch] = resp.results;
       this.pagesTotal = resp.info.pages;
 
+    }, (error) => {
+      this.alertError();
     });
   }
 
 
   //Gender 
-  sendGender(value: string){
 
+  genderActive(value:string): any{
+    if(value === this.gender) 
+    return 'btn btn-filter active' 
+    else return "btn btn-filter"
+
+  }
+
+
+  addGender(value: string){
+    this.gender = value;
+    this.genderActive(value);
+    this.params = {
+      page: this.p,
+      name: this.character,
+      status: this.statusGlobal,
+      gender: this.gender
+    }
+    this.api.getCharactersStatusExample(this.params).subscribe(resp => {
+      console.log(this.charactersSearch);
+      console.log(resp);
+      [...this.charactersSearch] = resp.results;
+      this.pagesTotal = resp.info.pages;
+
+    }, (error) => {
+     this.alertError();
+    });
+
+  }
+
+  alertError(){
+    Swal.fire({
+      icon: "error",
+      title: "No results found",
+      text: "Please choose another option",
+    })
   }
 }
