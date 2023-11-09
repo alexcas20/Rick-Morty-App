@@ -65,8 +65,10 @@ export class FavoritesComponent implements OnInit {
         localStorage.setItem('favorites', JSON.stringify(this.favoritesCharacters));
         if(this.favoritesCharacters.lenght <= 1){
           this.favoritesCharacters = [];
+         
         }
       } 
+      localStorage.removeItem('favorites');
       
       }
       else if(result.dismiss === Swal.DismissReason.cancel){
