@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 filter and look for a character you like of Rick and Morty Serie.
 
 #Demo
-
+https://rickandmorty-jacs.netlify.app
 
 # API
 https://rickandmortyapi.com/
@@ -19,29 +19,24 @@ https://rickandmortyapi.com/
 * 🚀 Bootstrap - https://getbootstrap.com/docs/5.2/getting-started/introduction/
 
 # Captures
-----------------------------------Home--------------------------------------------------------------------
+  ## Home
 
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/98fce2bc-e622-4e97-8533-5fd3c364720f)
 
-----------------------------------Search------------------------------------------------------------------
+  ## Search
 
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/e571a533-2c56-4535-ba20-35300e9eee86)
 
-----------------------------------Search with Filters-----------------------------------------------------
+  ## Search-Filter
 
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/c6c4f268-ec33-4cc7-a0e3-c05590e8d66a)
 
-----------------------------------Character info----------------------------------------------------------
+  ## Character Info
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/d4c771d4-5e4e-48ca-a44b-8278202be501)
 
-----------------------------------Favorites----------------------------------------------------------
+  ## Favorites
 
 ![image](https://github.com/alexcas20/Rick-Morty-App/assets/102688836/fc73991d-4f33-4a3f-854b-b13ec8154bc3)
-
-# Dependencies
-https://sweetalert2.github.io/
-
-Bootstrap 5
 
 ## Development server
 
