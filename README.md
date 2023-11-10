@@ -1,7 +1,4 @@
-# Project Title
-Rick and Morty Wiki 
-
-
+# Rick and Morty Wiki 
 
 # Info
 Filter and look for a character you like of Rick and Morty Serie.
