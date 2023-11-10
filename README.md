@@ -1,10 +1,12 @@
 # Project Title
 Rick and Morty Wiki 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+
 
 # Info
 filter and look for a character you like of Rick and Morty Serie.
+
+** This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
 # Demo
 https://rickandmorty-jacs.netlify.app
