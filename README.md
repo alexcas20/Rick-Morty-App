@@ -1,12 +1,22 @@
-# RickMortyApp
+# Project Title
+Rick and Morty Wiki 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
 
 # Info
-Rick and Morty wiki, filter and look for a character you like.
+filter and look for a character you like of Rick and Morty Serie.
+
+#Demo
+
 
 # API
 https://rickandmortyapi.com/
+
+## Getting Started
+
+### Dependencies
+* 😎 SweetAlert2 - https://sweetalert2.github.io/
+* 🚀 Bootstrap - https://getbootstrap.com/docs/5.2/getting-started/introduction/
 
 # Captures
 ----------------------------------Home--------------------------------------------------------------------
