@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Info
 filter and look for a character you like of Rick and Morty Serie.
 
-#Demo
+# Demo
 https://rickandmorty-jacs.netlify.app
 
 # API
